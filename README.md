@@ -33,17 +33,17 @@ gradle build
 ```
 build file is ready (app.jar)
 
-Add docker file to the root directory (example below)
+Create docker file to the root directory (example below)
 ```
 FROM openjdk:8-jdk // this will pull image from docker hub (takes some time to download)
 COPY build/libs/demo-0.0.1-app.jar /app.jar //(copy local app.jar file to docker container)
 EXPOSE 8080
 ENTRYPOINT [ "java", "-jar", "/app.jar"] //tell docker which file to exec.
 ```
+
 ## Connect Local Docker to Cloud 
 
 "docker build" will grab the local docker file & "-t" will tag and create an image in the cloud repository with the name provided.
-
 
 Adding tag after the image will differenciate each deployment! GCloud doesn't recognize the update unless the tag is changed.
 
@@ -70,6 +70,9 @@ kubectl expose deployment react-spring-app --type=LoadBalancer --port=80 --targe
 ```
 kubectl apply -f ./deployment.yml
 ```
+reference:
+http://35.226.14.8/deployToKubernetes
+http://35.226.14.8/secrets
 ```
 kubectl port-forward react-spring-two-86d56bff9d-prfpp 8080
 ```
