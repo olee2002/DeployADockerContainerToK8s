@@ -42,7 +42,7 @@ ENTRYPOINT [ "java", "-jar", "/app.jar"] //tell docker which file to exec.
 
 ```
 docker build -t gcr.io/Project-ID/ImageName:Tag .
-ocker build -t gcr.io/react-spring-app-252019/my-spring-app:v2 .
+example : docker build -t gcr.io/react-spring-app-252019/my-spring-app:v2 .
 ```
 
 ## GCloud Deployment
