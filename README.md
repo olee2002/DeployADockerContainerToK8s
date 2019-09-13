@@ -59,6 +59,7 @@ docker push gcr.io/Project-ID/ImageName:Tag
 
 ## GCloud Deployment
 Create a deployment by running (name is "react-spring-app" and image is "gcr.io/react-spring-app-252019/my-spring-app")
+images don't need to be directly from gcloud. it can be hosted at dockerhub as well.
 ### Manually creating deployment & service
 ```
 kubectl run react-spring-app --image=gcr.io/react-spring-app-252019/my-spring-app --port=8080 (creating deployment)
@@ -70,10 +71,13 @@ kubectl expose deployment react-spring-app --type=LoadBalancer --port=80 --targe
 ```
 kubectl apply -f ./deployment.yml
 ```
-reference:
-http://35.226.14.8/deployToKubernetes
-http://35.226.14.8/secrets
+
 ```
 kubectl port-forward react-spring-two-86d56bff9d-prfpp 8080
 ```
 Check the external IP address in GCloud console and should be able to access to the app at this point.
+
+reference:
+http://35.226.14.8/gcpAndKubernetes
+http://35.226.14.8/deployToKubernetes
+http://35.226.14.8/secrets
