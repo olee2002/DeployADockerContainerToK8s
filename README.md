@@ -78,6 +78,4 @@ kubectl port-forward react-spring-two-86d56bff9d-prfpp 8080
 Check the external IP address in GCloud console and should be able to access to the app at this point.
 
 reference:
-http://35.226.14.8/gcpAndKubernetes
-http://35.226.14.8/deployToKubernetes
-http://35.226.14.8/secrets
+http://35.226.14.8/
