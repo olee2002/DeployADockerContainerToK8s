@@ -8,6 +8,10 @@ Create an google cloud account with a $300 credit.
 - create a spanner instance
 
 ```
+gcloud init
+```
+
+```
 gcloud auth login
 ```
 ```
@@ -56,3 +60,4 @@ kubectl apply -f ./deployment.yml
 ```
 kubectl port-forward react-spring-two-86d56bff9d-prfpp 8080
 ```
+Check the external IP address in GCloud console and should be able to access to the app at this point.
