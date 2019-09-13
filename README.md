@@ -40,7 +40,7 @@ COPY build/libs/demo-0.0.1-app.jar /app.jar //(copy local app.jar file to docker
 EXPOSE 8080
 ENTRYPOINT [ "java", "-jar", "/app.jar"] //tell docker which file to exec.
 ```
-## Connect Local Docker to Cloud
+## Connect Local Docker to Cloud 
 
 "docker build" will grab the local docker file & "-t" will tag and create an image in the cloud repository with the name provided.
 
@@ -52,6 +52,7 @@ docker build -t gcr.io/Project-ID/ImageName:Tag .
 example : docker build -t gcr.io/react-spring-app-252019/my-spring-app:v2 .
 ```
 push the gcr tagged image to cloud with below
+(note: make sure push is done before creating deployment, otherwise it will throw an ImagePullOff err!) 
 ```
 docker push gcr.io/Project-ID/ImageName:Tag
 ```
