@@ -41,7 +41,8 @@ ENTRYPOINT [ "java", "-jar", "/app.jar"] //tell docker which file to exec.
 "docker build" will grab the local docker file & "-t" will tag and create an image in the cloud repository with the name provided
 
 ```
-docker build -t gcr.io/Project-ID/
+docker build -t gcr.io/Project-ID/ImageName:Tag .
+ocker build -t gcr.io/react-spring-app-252019/my-spring-app:v2 .
 ```
 
 ## GCloud Deployment
